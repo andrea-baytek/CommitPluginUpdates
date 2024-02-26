@@ -15,7 +15,7 @@ Commit messages include the following:
 1. Add the script to a PATH folder (See below).
 2. Open a terminal.
 3. Change the directory to the root directory of the site to be updated.
-4. Run `CommitPluginUpdates.py`
+4. Run `CommitPluginUpdates.py`.
 5. Follow the prompts from the script:
     1. Enter the repos production name. ***The script will push all commits to the branch name specified here***
     2. When prompted to update all themes, etc. open the backend of the site locally.
@@ -38,14 +38,14 @@ Commit messages include the following:
 ### SET PERMANENT PATH ENVIRONMENT VARIABLE
 #### MAC OS
 When running scripts it is easier to enter only the file name of the script you want to run (e.g. my-script.py), 
-rather than the entire path (e.g. /Users/ThisUser/Documents/my-script.py). 
+rather than the entire path (e.g. /Users/ThisUser/Documents/bin/my-script.py). 
 
 To do this, create a folder to store your script(s). The conventional name for this type of folder is 'bin' but it can be named anything.
 Then create a path variable to this folder by following the instructions below.
 
 To set path environment variable:
 1. In terminal, enter: `sudo nano /etc/paths`
-2. Paste the path you want to save (e.g. /Users/ThisUser/Documents/my-script.py).
+2. Paste the path you want to save (e.g. /Users/ThisUser/Documents/bin).
 3. Press `Ctrl + O` to save, and then `Ctrl + X` to quit nano.
 4. Restart all terminal windows for the changes to take effect.
 5. You can now access all files in that path simply by entering the file name in the terminal.
