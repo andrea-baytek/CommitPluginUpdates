@@ -9,12 +9,28 @@ Commit messages include the following:
 
 *Note*: This script does not handle Wordpress core updates.
 
+
 ## USING THE UPDATE TOOL
 
 1. Add the script to a PATH folder (See below).
 2. Open a terminal.
 3. Change the directory to the root directory of the site to be updated.
 4. Run `CommitPluginUpdates.py`
+5. Follow the prompts from the script:
+    1. Enter the repos production name. ***The script will push all commits to the branch name specified here***
+    2. When prompted to update all themes, etc. open the backend of the site locally.
+    3. Once all updates are complete, hit enter to prompt the script to continue.
+    4. Choose whether to make the commits automatically or manually. 
+        * **Automatically**
+        : will run through all updated and untracked files and commit them without any additional input.
+        * **Manually** 
+        : Script will prompt you for for an action with each plugin, etc. Choices are: 
+            1. Commit plugin 
+            2. List all files set to be commited 
+            3. Skips this plugin, etc.
+    5. Finally, hit enter to push all changes to the repo.
+
+
 
 
 --------
@@ -45,3 +61,11 @@ To set path environment variable:
 6. Click variable called “Path” and click “Edit…”
 7. Click “New”
 8. Enter the path to the folder containing the binary you want on your PATH. 
+
+-----
+
+### TROUBLESHOOTING 
+**[Errno 2] No such file or directory** : 
+- Confirm that Python3 is installed on your machine. 
+- Check the path to your python 3 file by entering the command `which python3` into the terminal. 
+- If the value returned does not match `/usr/bin/python3`, edit the path in line one of the script to match the path that was returned.
